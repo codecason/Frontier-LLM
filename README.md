@@ -1,10 +1,12 @@
-## 1. 国际“御三家”基座模型
+
+
+### 1. 国际“御三家”基座大语言模型
 
 #### OpenAI
 
 \[GPT-3\]：Language Models are Few-Shot Learners：2020.6（⭐⭐⭐⭐）
 
-- 开山鼻祖，直接影响了后续ChatGPT的诞生
+- 开山鼻祖，直接促成了后续ChatGPT的诞生
 - 175B参数，上下文学习
 
 \[GPT-4\]：GPT-4 Technical Report：2023.3 （⭐⭐⭐⭐⭐）
@@ -12,6 +14,8 @@
 - 对ChatGPT技术的全面展示；在此之后OpenAI开始转向商业化，很难再有如此的细节披露了
 
 
+
+---
 
 #### Anthropic
 
@@ -83,7 +87,7 @@ Introducing Muse Spark: Scaling Towards Personal Superintelligence:2026.4
 
 PENDING
 
-#### 2.中国大模型
+### 2.中国大语言模型
 
 #### Moonshoot Kimi
 
@@ -95,7 +99,7 @@ Kimi K2: Open Agentic Intelligence:  2025.7 https://arxiv.org/abs/2507.20534
 
 Kimi K2.5: Visual Agentic Intelligence: 2026.2 https://arxiv.org/pdf/2602.02276 ⭐⭐⭐⭐ 
 
-- 非常简洁，用的是主流的技术；强调了token-efficiency。但是细节不是很多，几乎是一笔带过。而在Agentic Infra上面似乎也没有讲太多东西。
+- 非常简洁，用的是主流的技术；强调了**token-efficiency**。但是细节不是很多，几乎是一笔带过。而在Agentic Infra上面似乎也没有讲太多东西。
 
 
 
@@ -117,13 +121,13 @@ GLM-5: from Vibe Coding to Agentic Engineering: 2026.2
 
 - 重点放在了异步RL；
 
-- GLM-5 On-Policy Cross-Stage Distillation
+- GLM-5 **On-Policy Cross-Stage Distillation**
 
   中规中矩，没有太多技术创新；
 
   Thinking的三种模式似乎只是格式的变化，而且又增加了认知的成本；
 
-  后训练：IcePop  技巧缓解训推不一致性；
+  后训练：**IcePop  技巧缓解训推**不一致性；
 
   DSA=Indexer；
 
@@ -152,17 +156,25 @@ DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learni
 
 DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition，2025.4
 
+DeepSeek-V3.2, DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models, 2025.12 ⭐⭐⭐
+
+![image-20260603185804239](images/README/deepseek-v3.2.png)
+
+- Unbiased K3 Estimator
+
+
+
 Deepseek-V4（Flash/Pro): 2026.4 ⭐⭐⭐⭐
 
-- 继承了Kimi Muon优化器的衣钵；用到了自己创新的mHC；
+- 继承了Kimi Muon优化器的衣钵；用到了自己创新的**mHC**；
 
-- Infra 味非常浓，介绍了EP Scheme如何通过通信和计算的流水线化降低延迟，DeepGEMM的使用；
+- Infra 味非常浓，介绍了**EP Scheme**如何通过通信和计算的流水线化降低延迟，**DeepGEMM**的使用；
 
 - 提到了Ascend芯片的适配问题；
 
-- 在算子层面，提到了新锐TileLang，这也是北大系的重要贡献；提到了一些虽然看起来像魔法但其实又在情理之中（不代表容易）的技巧；例如紧凑的代码表示，SMT-Solver-Assisted技巧；
+- 在算子层面，提到了新锐**TileLang**，这也是北大系的重要贡献；提到了一些虽然看起来像魔法但其实又在情理之中（不代表容易）的技巧；例如紧凑的代码表示，**SMT-Solver-Assisted**技巧；
 
-- 批次不变性：Batch Invariance，可能是受到了Thinking Machine Lab的影响，希望去掉训练的随机性；这么做的好处是为了方便debug；
+- 批次不变性：**Batch Invariance**，可能是受到了**Thinking Machine Lab**的影响，希望去掉训练的随机性；这么做的好处是为了方便debug；
 
 - 细粒度的checkpoint机制的微分（本来要用checkpoint减少显存占用，但是checkpoint的粒度太大，计算量增加，所以要手写减少计算量，但是手写又不能自动微分，开发量太大，所以写了个自动微分的方法）；
 
@@ -240,7 +252,38 @@ Seedance 2.0: Advancing Video Generation for World Complexity
 
 
 
-#### 3 技术总结
+### 3. 具身智能
+
+#### 阿里-通义千问
+
+2026年 6 月 16 日，阿里正式推出通义千问首款全系列完整具身智能模型 Qwen-Robot，该系列由三款模型构成：分别是依托超 38100 小时开源操作数据完成训练的 VLA 操作模型 Qwen-RobotManip、面向移动场景的 VLN 导航模型 Qwen-RobotNav，以及以自然语言为动作交互接口、融合二十余种机器人本体开展联合训练的世界模型 Qwen-RobotWorld。三款模型既支持单独部署使用，也能够联动协同运行。（来源：机器人全球资讯）
+
+这三篇论文在具身智能业界算得上一股清流，信息密度很大，内容富有借鉴意义
+
+其实从Qwen3-VL技术报告可以看出通义其实内部对多模态已经有相当好的技术积累。所以单纯从VL出发推进的具身智能技术路线有这样的水平并不意外。
+
+**Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System**
+ arXiv: 2606.18112，2026.6
+
+**Qwen-RobotManip Technical Report: Alignment Unlocks Scale for Robotic Manipulation Foundation Models**
+ arXiv: 2606.17846，2026.6
+
+**Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation**
+ arXiv: 2606.17030，2026.6
+
+**三篇论文的关系**：
+
+| 论文            | 解决的问题             | 对应能力 |
+| --------------- | ---------------------- | -------- |
+| Qwen-RobotNav   | 机器人如何在环境中移动 | 空间导航 |
+| Qwen-RobotManip | 机器人如何操作物体     | 物理交互 |
+| Qwen-RobotWorld | 行动后世界会如何变化   | 世界预测 |
+
+
+
+---
+
+### 4. 技术总结
 
 模型架构（GDN, DSA, NSA，MoE）
 
