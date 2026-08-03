@@ -89,7 +89,9 @@ PENDING
 
 ### 2.中国大语言模型
 
-#### Moonshoot Kimi
+### T0
+
+#### 月之暗面 Moonshoot Kimi
 
 Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving: 2025.9
 
@@ -97,9 +99,21 @@ Kimi k1.5: Scaling Reinforcement Learning with LLMs: 2025.1 https://arxiv.org/ab
 
 Kimi K2: Open Agentic Intelligence:  2025.7 https://arxiv.org/abs/2507.20534
 
+- 最早明确使用Muon 优化器的Kimi模型
+
 Kimi K2.5: Visual Agentic Intelligence: 2026.2 https://arxiv.org/pdf/2602.02276 ⭐⭐⭐⭐ 
 
 - 非常简洁，用的是主流的技术；强调了**token-efficiency**。但是细节不是很多，几乎是一笔带过。而在Agentic Infra上面似乎也没有讲太多东西。
+- Agent Swarms可能是独有或单独提到的技术
+
+Kimi K3:  ⭐⭐⭐⭐⭐ , 2026.7
+
+- 架构大杂烩，加入了2025就提出来的KDA，以及全新的AttnRes；此外还有GatedMLA，Stable LatentMoE，MoonViT-V2
+- 重要意义在于追上了当时最先进闭源大模型Fable 5的水准，并且在前端代码方面展示了自己独一无二的实力
+- 是原生多模态的大模型，所谓原生，是指从训练之初就用到了多个模态的数据在同一个主架构里进行联合训练，但是这仍然会用到一个视觉Encoder。
+- Post-Train：Multi-Teacher Distillation；GRM升级为Agentic GRM（这个事实上可能会导致更长的耗时）；个人助理数据构造，Gmail, Notion, Slack, and Canvas作为低成本的模拟器
+- Infra：Virtual Stages（应该是受到了网络负载均衡的启发），MoE balanced等多个优化
+- Infra 推理：略（**吐槽：**即使做了如此多的优化Kimi K3仍然是非常慢的一个模型）
 
 
 
@@ -249,6 +263,32 @@ Seed diffusion: A large-scale diffusion language model with high-speed inference
 Seedance 2.0: Advancing Video Generation for World Complexity
 
 - 视频生成领域的第一（2026年）
+
+
+
+#### 腾讯混元
+
+Hunyuan-3: Hy3 
+
+参考INT2的实现方法：
+
+Hy3 模型：https://huggingface.co/tencent/Hy3
+
+低比特GGUF模型：https://huggingface.co/AngelSlim/Hy3-GGUF
+
+llama.cpp patch : https://huggingface.co/AngelSlim/Hy3-GGUF/tree/main/patches
+
+https://huggingface.co/AngelSlim/Hy3-GGUF/blob/main/patches/01-hyv3-arch.patch
+
+
+
+### T2
+
+#### 阶跃星辰
+
+
+
+#### 商汤
 
 
 
