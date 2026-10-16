@@ -66,7 +66,7 @@ Gemma 2: Improving Open Language Models at a Practical Size
 
 Gemma 3 Technical Report
 
-Gemma4 Report [Unofficial Introduction](https://huggingface.co/blog/gemma4)
+Gemma 4: Gemma4 Report [Unofficial Introduction](https://huggingface.co/blog/gemma4)
 
 
 
@@ -282,7 +282,33 @@ https://huggingface.co/AngelSlim/Hy3-GGUF/blob/main/patches/01-hyv3-arch.patch
 
 
 
+#### 蚂蚁百灵 Bailing (Ling / Ring / Ming)
+
+Ling-Plus/Ling-Lite, Every FLOP Counts: Scaling a 300B Mixture-of-Experts LING LLM without Premium GPUs，2025.3 https://arxiv.org/abs/2503.05139
+
+Ling-Coder-Lite, Every Sample Matters: Leveraging Mixture-of-Experts and High-Quality Data for Efficient and Accurate Code LLM，2025.3
+
+Ring-lite, Ring-lite: Scalable Reasoning via C3PO-Stabilized Reinforcement Learning for LLMs，2025.6
+
+Ming-Omni, Ming-Omni: A Unified Multimodal Model for Perception and Generation，2025.6
+
+Ling 2.0 (Ling-mini/flash-2.0, Ling-1T), Every Activation Boosted: Scaling General Reasoner to 1 Trillion Open Language Foundation，2025.10 https://arxiv.org/abs/2510.22115
+
+Ring-1T, Every Step Evolves: Scaling Reinforcement Learning for Trillion-Scale Thinking Model，2025.10 https://arxiv.org/abs/2510.18855
+
+Ring-linear, Every Attention Matters: An Efficient Hybrid Architecture for Long-Context Reasoning，2025.10
+
+- 名字遵循首字母的规范：**Ling** 通用语言模型（非思考），**Ring** 推理/思考模型，**Ming** 全模态理解与生成；另有 LLaDA 系列扩散语言模型
+- 全系 MoE 架构，主打高稀疏度（Ling 2.0 约 1/32 激活比）与低成本训练
+- 万亿参数开源：Ling-1T 与 Ring-1T，Ring-1T 的 RL 侧提出 IcePop（缓解训推不一致）、C3PO++、ASystem 等
+
+Ling and Ring 2.6 Technical Report: Efficient and Instant Agentic Intelligence at Trillion-Parameter Scale 2026.6 https://arxiv.org/abs/2606.15079
+
+评价：总体看起来除了**LLaDA**没有什么存在感，但是AReaL是一个很优雅的框架
+
 ### T2
+
+
 
 #### 阶跃星辰
 
